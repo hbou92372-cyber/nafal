@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nafal | نَفَل — مساحة للنفع</title>
+<meta name="description" content="نَفَل — مساحة للخير الطوعي، للعطاء الصامت، وللكلمة التي تُضيء قلبًا.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+:root{
+  --green:#234b3a; --deep:#16382b; --sage:#718a72; --cream:#faf7ef;
+  --gold:#b99a58; --gold2:#d8bd7a; --white:#fffdf8; --ink:#25352d;
+  --muted:#718078; --line:#e8e1d2; --shadow:0 18px 55px rgba(35,75,58,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Cairo,Arial,sans-serif;line-height:1.9}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(250,247,239,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(185,154,88,.18)}
+.navin{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--green)}
+.brandmark{width:43px;height:43px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:#fffaf0;color:var(--green);font-size:21px}
+.brand small{display:block;font-size:11px;color:var(--gold);letter-spacing:.8px;font-weight:600}
+.links{display:flex;gap:24px;font-size:14px;color:#4d5c54}
+.links a:hover{color:var(--green)}
+.navbtn{border:1px solid var(--gold);padding:8px 17px;border-radius:24px;color:var(--green);font-weight:700;font-size:13px}
+.hero{padding:78px 0 55px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);pointer-events:none}
+.hero:before{width:420px;height:420px;background:rgba(216,189,122,.13);top:-180px;right:-160px}
+.hero:after{width:300px;height:300px;background:rgba(113,138,114,.10);bottom:-150px;left:-120px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.kicker{color:var(--gold);font-weight:800;font-size:14px;letter-spacing:1px}
+h1{font-family:"Playfair Display",serif;font-size:clamp(55px,8vw,92px);line-height:1;margin:13px 0 3px;color:var(--green);direction:ltr}
+.arabic-name{font-size:32px;font-weight:700;color:var(--deep);margin-bottom:18px}
+.hero h2{font-size:clamp(25px,3vw,38px);line-height:1.45;margin:0 0 17px;color:#2d4037}
+.hero p{font-size:17px;color:#66736c;max-width:590px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{padding:12px 22px;border-radius:30px;font-weight:700;font-size:14px;transition:.2s}
+.primary{background:var(--green);color:white;box-shadow:0 10px 25px rgba(35,75,58,.18)}
+.secondary{border:1px solid var(--gold);color:var(--green);background:#fffdf8}
+.btn:hover{transform:translateY(-2px)}
+.manifesto{background:#fffdf8;border:1px solid var(--line);border-radius:32px;padding:34px;box-shadow:var(--shadow);position:relative}
+.manifesto .flower{position:absolute;top:18px;left:22px;color:var(--gold);font-size:25px}
+.quote{font-size:21px;font-weight:700;color:var(--green);margin:12px 0 22px}
+.manifesto p{font-size:15px;color:#68766f;margin:0 0 17px}
+.signature{color:var(--gold);font-weight:700;font-size:14px}
+.section{padding:78px 0}
+.section.alt{background:#f2eee4}
+.sectionhead{text-align:center;max-width:700px;margin:0 auto 38px}
+.eyebrow{font-size:12px;color:var(--gold);font-weight:800;letter-spacing:1px}
+h3{font-size:32px;color:var(--green);margin:5px 0 10px}
+.sectionhead p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fffdf8;border:1px solid var(--line);border-radius:22px;padding:27px;min-height:205px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.icon{width:47px;height:47px;border-radius:15px;background:#f1ead9;display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+.card h4{margin:0 0 7px;color:var(--green);font-size:18px}
+.card p{margin:0;color:#707d76;font-size:14px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+.aboutbox{background:var(--green);color:#f8f3e7;border-radius:30px;padding:40px;position:relative;overflow:hidden}
+.aboutbox:after{content:"نَفَل";position:absolute;left:-10px;bottom:-55px;font-size:130px;color:rgba(255,255,255,.05);font-weight:800}
+.aboutbox h3{color:white}
+.aboutbox p{color:#dce6de}
+.values{display:grid;gap:15px}
+.value{display:flex;gap:15px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}
+.value b{color:var(--green)}
+.value span{color:#6e7b74;font-size:14px}
+.impact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.stat{padding:28px;border-radius:22px;background:#fffdf8;border:1px solid var(--line);text-align:center}
+.stat strong{display:block;font-size:34px;color:var(--gold)}
+.stat span{font-size:13px;color:var(--muted)}
+.cta{background:linear-gradient(135deg,#234b3a,#315d49);border-radius:34px;padding:50px;color:white;text-align:center;position:relative;overflow:hidden}
+.cta h3{color:white}
+.cta p{color:#dfe9e1;max-width:650px;margin:0 auto 20px}
+footer{padding:35px 0;color:#718078;font-size:13px}
+.footerin{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);padding-top:25px}
+.gold{color:var(--gold)}
+@media(max-width:800px){
+ .links{display:none}.hero-grid,.about{grid-template-columns:1fr}.hero{padding-top:55px}
+ .cards{grid-template-columns:1fr}.impact{grid-template-columns:1fr 1fr}
+ .manifesto{margin-top:10px}.footerin{flex-direction:column;text-align:center}
+}
+@media(max-width:500px){.impact{grid-template-columns:1fr}.hero h2{font-size:25px}.manifesto{padding:25px}}
+</style>
+</head>
+<body>
+<nav>
+ <div class="container navin">
+  <a class="brand" href="#home">
+   <span class="brandmark">ن</span>
+   <span>Nafal<small>نَفَل</small></span>
+  </a>
+  <div class="links">
+   <a href="#home">الرئيسية</a><a href="#idea">فكرة نَفَل</a><a href="#sections">مساحات النفع</a><a href="#about">من نحن</a>
+  </div>
+  <a class="navbtn" href="#join">اترك أثرًا</a>
+ </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="kicker">🌼 مساحة صغيرة… لنفعٍ كبير</div>
+   <h1>Nafal</h1>
+   <div class="arabic-name">نَفَل</div>
+   <h2>خذ ما ينفعك، واترك ما ينفع غيرك.</h2>
+   <p>مساحة للخير الطوعي، للعطاء الصامت، للكلمة التي تُضيء قلبًا دون أن تعرفه، وللفكرة التي قد تغيّر شيئًا جميلًا في حياة إنسان.</p>
+   <div class="ctas"><a class="btn primary" href="#sections">اكتشف نَفَل</a><a class="btn secondary" href="#about">فلسفة المشروع</a></div>
+  </div>
+  <div class="manifesto">
+   <div class="flower">🌿</div>
+   <div class="kicker">بيان نَفَل</div>
+   <div class="quote">«نَفَل» كلمة عربية أصيلة تحمل في طيّاتها معنى الفضل والعطاء الإضافي.</div>
+   <p>النَّفَل هو الخير الزائد عن الفرض، والعطاء النابع من القلب، لا يُطلب ولا يُنتظر عليه مقابل.</p>
+   <p>لذلك ليست نَفَل مجرد صفحة؛ بل محاولة لصناعة أثر نافع، ونشر محتوى يبقى نفعه بعد لحظة قراءته.</p>
+   <div class="signature">— Nafal_نَفَل 🌼🌿</div>
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="idea">
+ <div class="container">
+  <div class="sectionhead">
+   <div class="eyebrow">الفكرة</div><h3>لماذا نَفَل؟</h3>
+   <p>لأن الخير لا يُقيّد بنوع، وكل معروف يمكن أن يفتح بابًا لخير آخر.</p>
+  </div>
+  <div class="cards">
+   <article class="card"><div class="icon">🌱</div><h4>خيرٌ طوعي</h4><p>نصنع ونشارك ما ينفع، بلا انتظار لمقابل ولا حاجة إلى ضجيج.</p></article>
+   <article class="card"><div class="icon">💡</div><h4>فكرة تُنير</h4><p>معلومة صحيحة، فكرة نافعة، أو كلمة في وقتها قد تترك أثرًا لا نراه.</p></article>
+   <article class="card"><div class="icon">🤍</div><h4>عطاء صامت</h4><p>أحيانًا أجمل الخير هو الذي يصل إلى إنسان دون أن يعرف من كان وراءه.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="sections">
+ <div class="container">
+  <div class="sectionhead">
+   <div class="eyebrow">مساحات النفع</div><h3>ماذا سيجد الزائر في نَفَل؟</h3>
+   <p>أقسام قابلة للتوسع مع الوقت، لتتحول الصفحة إلى مكتبة نفع إلكترونية.</p>
+  </div>
+  <div class="cards">
+   <article class="card"><div class="icon">📖</div><h4>نَفَل العلم</h4><p>كتب وموارد تعليمية ومصادر مجانية وموثوقة، مرتبة ليسهل الوصول إليها.</p></article>
+   <article class="card"><div class="icon">🤲</div><h4>نَفَل الروح</h4><p>آيات وأذكار وأدعية وأحاديث صحيحة مع العناية بالتوثيق.</p></article>
+   <article class="card"><div class="icon">🎓</div><h4>نَفَل للطالب</h4><p>أدوات ومراجع ومصادر تساعد الطالب في التعلم والبحث والكتابة.</p></article>
+   <article class="card"><div class="icon">🌼</div><h4>نَفَل للإنسان</h4><p>كلمات مواساة، أفكار للحياة، ومحتوى إنساني بسيط يخفف ويعين.</p></article>
+   <article class="card"><div class="icon">🔗</div><h4>مكتبة الروابط</h4><p>دليل مختار لمواقع وأدوات مجانية نافعة بدل البحث الطويل والمتعب.</p></article>
+   <article class="card"><div class="icon"></div><h4>نَفَل اليوم</h4><p>كل يوم شيء واحد يستحق أن يُقرأ أو يُحفظ أو يُشارك.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="about">
+ <div class="container about">
+  <div class="aboutbox">
+   <div class="eyebrow">رسالة نَفَل</div>
+   <h3>أن نترك في العالم بصمة خير.</h3>
+   <p>أن ننشر نورًا لا يُطفأ، وأن تكون كل مادة نافعة سببًا في وصول الخير إلى أشخاص لا نعرفهم، لكن الله يعلمهم.</p>
+  </div>
+  <div class="values">
+   <div class="value"><b>كل منشور نافع</b><span>فرصة لنفع إنسان آخر.</span></div>
+   <div class="value"><b>كل معلومة موثوقة</b><span>يمكن أن تختصر على شخص طريقًا طويلًا.</span></div>
+   <div class="value"><b>كل مشاركة بنية طيبة</b><span>قد تفتح بابًا لخير لا نراه.</span></div>
+   <div class="value"><b>كل زائر</b><span>يمكن أن يكون شريكًا في صناعة النفع.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container">
+  <div class="sectionhead">
+   <div class="eyebrow">الأثر</div><h3>نَفَل يكبر بالانتفاع</h3>
+   <p>هذه الأرقام ستكون حقيقية عندما يبدأ الموقع بجمع البيانات، وليست أرقامًا تجميلية.</p>
+  </div>
+  <div class="impact">
+   <div class="stat"><strong>—</strong><span>مادة نافعة منشورة</span></div>
+   <div class="stat"><strong>—</strong><span>زائر استفاد</span></div>
+   <div class="stat"><strong>—</strong><span>مورد تمت مشاركته</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="join">
+ <div class="container">
+  <div class="cta">
+   <div class="eyebrow">اترك أثرًا</div>
+   <h3>هل لديك شيء نافع يستحق أن يصل؟</h3>
+   <p>في النسخة القادمة من نَفَل، يمكن للزوار اقتراح كتاب، أداة، مصدر أو فكرة نافعة، ثم تُراجع قبل نشرها.</p>
+   <a class="btn secondary" href="mailto:hello@nafal.example">اقترح نفعًا</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footerin">
+  <div><strong class="gold">Nafal_نَفَل🌼🌿</strong> — الخير لا يُقيّد بنوع.</div>
+  <div>© <span id="year"></span> Nafal</div>
+ </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
